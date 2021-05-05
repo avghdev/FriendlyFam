@@ -8,10 +8,10 @@ app.secret_key = "secret"
 
 
 db = mysql.connector.connect(
-    host = "localhost",
-    user = "root",
-    password = "ffLw8ZARZGoG!",
-    database = "friendlyfam"
+    host = "us-cdbr-east-03.cleardb.com",
+    user = "bc99de75d20aa7",
+    password = "9eb5e0df!",
+    database = "heroku_4f28d9fbf145463"
 )
 
 mycursor = db.cursor()
