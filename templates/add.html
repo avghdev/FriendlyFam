@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="container">
+    <h2> Post an Event: </h2>
+
+    <div class="container text-left">
+        <div class="inputbox-add-event" id="add-event">
+            <form method="POST" action="/add">
+                <div class="form-group">
+                    <input class="form-control item" name="description" placeholder="Describe: e.g. Emily's Birthday Party" required>
+                    <input class="form-control item" name="day" placeholder="Date: e.g. Jan. 20" required>
+                    <input class="form-control item" name="time" placeholder="Time: e.g. 5:00 pm" required>
+                    <button class="btn btn-primary" id="event-submit" type="submit">Add Event </button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <br>
+
+
+</div>
+{% endblock content %}

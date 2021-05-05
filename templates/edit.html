@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="container">
+    <h2> Edit an Event: </h2>
+
+    <div class="container text-left">
+        <div class="inputbox-add-event" id="add-event">
+            <form method="POST" action="/update/{{event[0]}}">
+                <div class="form-group">
+                    <input class="form-control item" name="description" placeholder="Describe: e.g. Emily's Birthday Party" required value="{{event[2]}}" >
+                    <input class="form-control item" name="day" placeholder="Date: e.g. Jan. 20" required value="{{event[3]}}" >
+                    <input class="form-control item" name="time" placeholder="Time: e.g. 5:00 pm" required value="{{event[4]}}" >
+                    <select class="form-control item" name="status" required>
+                        <option selected hidden>{{event[5]}}</option>
+                        <option value="Still on">Still on</option>
+                        <option value="Canceled">Canceled</option>
+                    </select>
+                    <button class="btn btn-primary" id="event-submit" type="submit">Submit </button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <br>
+
+
+</div>
+{% endblock content %}
